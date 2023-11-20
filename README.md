@@ -18,7 +18,7 @@ you can check out my Reactive Implementation for a different perspective here:
 
 📌 **Jest for unit tests**
 
-📌 **Nx as build system**
+📌 **Nx architecture modularity provider and as a build system**
 
 📌 **Eslint**
 
