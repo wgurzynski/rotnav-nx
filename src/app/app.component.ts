@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { RouterModule, RouterOutlet } from '@angular/router';
-import { NavigationComponent } from '@shared/components/navigation/navigation.component';
+import { NavigationComponent } from '@shared';
 
 @Component({
   standalone: true,
