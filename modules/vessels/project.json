@@ -2,7 +2,7 @@
   "name": "modules-vessels",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "modules/vessels/src",
-  "prefix": "lib",
+  "prefix": "ui",
   "tags": ["type:feature", "scope:vessels"],
   "projectType": "library",
   "targets": {

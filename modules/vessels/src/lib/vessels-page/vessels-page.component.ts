@@ -8,7 +8,7 @@ import { VesselsTableComponent } from './components/vessels-table/vessels-table.
 import { VesselsRowData } from '@shared';
 
 @Component({
-  selector: 'app-vessels-page',
+  selector: 'ui-vessels-page',
   standalone: true,
   imports: [CommonModule, AgGridModule, VesselsTableComponent],
   templateUrl: './vessels-page.component.html',

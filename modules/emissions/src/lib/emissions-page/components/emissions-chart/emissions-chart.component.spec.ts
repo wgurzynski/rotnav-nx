@@ -3,8 +3,6 @@ import { EmissionsChartComponent } from './emissions-chart.component';
 import { EmissionChartStructure } from '@shared';
 import { Store, StoreModule } from '@ngrx/store';
 import { emissionPageReducer } from '../../state/reducers/emissions-page.reducer';
-// eslint-disable-next-line @nx/enforce-module-boundaries
-import { vesselsPageReducer } from '@vessels';
 
 describe('EmissionsChartComponent', () => {
   let component: EmissionsChartComponent;
@@ -12,7 +10,7 @@ describe('EmissionsChartComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [EmissionsChartComponent, StoreModule.forRoot({ emissions: emissionPageReducer, vessels: vesselsPageReducer })],
+      imports: [EmissionsChartComponent, StoreModule.forRoot({ emissions: emissionPageReducer })],
       providers: [Store],
     }).compileComponents();
 
@@ -109,7 +107,7 @@ describe('EmissionsChartComponent', () => {
       ],
     };
 
-    jest.spyOn(component as any, 'createChartLine');
+    jest.spyOn(component as never, 'createChartLine');
     component.chartData = mockInputChartData;
 
     expect(component['createChartLine']).toHaveBeenCalledWith(mockInputChartData);

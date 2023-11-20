@@ -8,8 +8,6 @@ import { provideAnimations } from '@angular/platform-browser/animations';
 import { ErrorInterceptor } from '@shared';
 import { emissionPageReducer } from '@emissions';
 import { provideStoreDevtools } from '@ngrx/store-devtools';
-
-// eslint-disable-next-line @nx/enforce-module-boundaries
 import { vesselsPageReducer, VesselsApiActions, VesselsApiEffects } from '@vessels';
 import { EmissionsApiEffects } from '@emissions';
 

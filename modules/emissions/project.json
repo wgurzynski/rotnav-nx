@@ -2,7 +2,7 @@
   "name": "modules-emissions",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "modules/emissions/src",
-  "prefix": "lib",
+  "prefix": "ui",
   "tags": ["type:feature", "scope:emissions"],
   "projectType": "library",
   "targets": {

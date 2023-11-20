@@ -1,10 +1,12 @@
-<div id='chart-wrapper'>
+<div id="chart-wrapper">
   <p-panel>
-    <ng-template pTemplate="header" class='panel-header'> <app-emissions-dropdown
-      [options]="dropdownOptions$ | async"
-      [selectedOption]="activeEmissionSet$ | async"
-      (changeSelectedOption)="onChangeSelectedOption($event)"
-    ></app-emissions-dropdown></ng-template>
-    <app-emissions-chart *ngIf="activeChartData$ | async as activeChartData" [chartData]='activeChartData'></app-emissions-chart>
+    <ng-template pTemplate="header" class="panel-header">
+      <ui-emissions-dropdown
+        [options]="dropdownOptions$ | async"
+        [selectedOption]="activeEmissionSet$ | async"
+        (changeSelectedOption)="onChangeSelectedOption($event)"
+      ></ui-emissions-dropdown
+    ></ng-template>
+    <ui-emissions-chart *ngIf="activeChartData$ | async as activeChartData" [chartData]="activeChartData"></ui-emissions-chart>
   </p-panel>
 </div>

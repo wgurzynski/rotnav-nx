@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { MenuItem, MenuItemCommandEvent } from 'primeng/api';
-import { NavigationEnd, Router } from '@angular/router';
+import { NavigationEnd, Router, RouterEvent } from '@angular/router';
 import { ROUTE_NAMES } from '../../constants/routes.constants';
 import { BehaviorSubject, filter, map, Observable, shareReplay, take } from 'rxjs';
 
@@ -31,7 +31,7 @@ export class NavigationFacade {
     router.events
       .pipe(
         filter((event) => event instanceof NavigationEnd),
-        map((route) => this.findMenuItemByActiveRoute(route, this.menuItems)),
+        map((route) => this.findMenuItemByActiveRoute(route as RouterEvent, this.menuItems)),
         take(1)
       )
       .subscribe((activeRouteMenuItem: MenuItem) => this.changeActiveItem(activeRouteMenuItem));
@@ -46,7 +46,7 @@ export class NavigationFacade {
     this.activeItemSub$.next(activatedMenuItem);
   }
 
-  private findMenuItemByActiveRoute(route: any, menuItems: MenuItem[]): MenuItem {
+  private findMenuItemByActiveRoute(route: RouterEvent, menuItems: MenuItem[]): MenuItem {
     const routeName = route.url.replace('/', '');
 
     return menuItems.filter((menuItem: MenuItem) => menuItem.id === routeName)[0];

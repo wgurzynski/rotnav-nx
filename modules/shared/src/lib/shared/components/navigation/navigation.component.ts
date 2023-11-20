@@ -6,7 +6,7 @@ import { NavigationFacade } from './navigation.facade';
 import { Observable } from 'rxjs';
 
 @Component({
-  selector: 'app-navigation',
+  selector: 'common-navigation',
   standalone: true,
   imports: [CommonModule, TabMenuModule],
   templateUrl: './navigation.component.html',

@@ -6,7 +6,7 @@ import { DropdownChangeEvent } from 'primeng/dropdown/dropdown.interface';
 import { EmissionsDropdownOption } from '@shared';
 
 @Component({
-  selector: 'app-emissions-dropdown',
+  selector: 'ui-emissions-dropdown',
   standalone: true,
   imports: [CommonModule, DropdownModule, ReactiveFormsModule],
   templateUrl: './emissions-dropdown.component.html',

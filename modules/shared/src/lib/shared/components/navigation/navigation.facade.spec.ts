@@ -15,7 +15,7 @@ describe('NavigationConnector', () => {
         {
           provide: Router,
           useValue: {
-            events: of(new NavigationEnd(0, '/test', '/test')), // Mock the Router events observable
+            events: of(new NavigationEnd(0, '/test', '/test')),
             navigate: jest.fn(),
           },
         },
@@ -40,7 +40,7 @@ describe('NavigationConnector', () => {
       },
     };
 
-    jest.spyOn(navigationConnector as any, 'changeActiveItem');
+    jest.spyOn(navigationConnector as never, 'changeActiveItem');
 
     navigationConnector.onNavigationChange(menuItem, 'test');
 
@@ -54,18 +54,16 @@ describe('NavigationConnector', () => {
         label: 'Vessels',
         icon: 'pi pi-fw pi-database',
         id: 'vessels',
-        command: (_event: MenuItemCommandEvent) => {},
       },
       {
         label: 'Emissions',
         icon: 'pi pi-fw pi-chart-bar',
         id: 'emissions',
-        command: (_event: MenuItemCommandEvent) => {},
       },
     ];
 
     const activeRoute: NavigationEnd = new NavigationEnd(0, '/vessels', '/vessels');
-    const activeMenuItem = (navigationConnector as any).findMenuItemByActiveRoute(activeRoute, menuItems);
+    const activeMenuItem: MenuItem = navigationConnector['findMenuItemByActiveRoute'](activeRoute, menuItems);
 
     expect(activeMenuItem).toEqual(menuItems[0]);
   });

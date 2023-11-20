@@ -8,7 +8,7 @@ import { EmissionChartStructure, EmissionsDropdownOption } from '@shared';
 import { PanelModule } from 'primeng/panel';
 
 @Component({
-  selector: 'app-emissions-page',
+  selector: 'ui-emissions-page',
   standalone: true,
   imports: [CommonModule, EmissionsChartComponent, EmissionsDropdownComponent, PanelModule],
   templateUrl: './emissions-page.component.html',

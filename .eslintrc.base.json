@@ -15,6 +15,26 @@
               {
                 "sourceTag": "*",
                 "onlyDependOnLibsWithTags": ["*"]
+              },
+              {
+                "sourceTag": "type:feature",
+                "onlyDependOnLibsWithTags": ["type:feature", "type:shared"]
+              },
+              {
+                "sourceTag": "type:shared",
+                "onlyDependOnLibsWithTags": ["type:shared"]
+              },
+              {
+                "sourceTag": "scope:emissions",
+                "onlyDependOnLibsWithTags": ["scope:emissions","scope:vessels","scope:shared"]
+              },
+              {
+                "sourceTag": "scope:vessels",
+                "onlyDependOnLibsWithTags": ["scope:emissions","scope:vessels","scope:shared"]
+              },
+              {
+                "sourceTag": "scope:shared",
+                "onlyDependOnLibsWithTags": ["scope:shared"]
               }
             ]
           }

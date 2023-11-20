@@ -6,7 +6,7 @@ import { EmissionChartStructure } from '@shared';
 Accessibility(Highcharts);
 
 @Component({
-  selector: 'app-emissions-chart',
+  selector: 'ui-emissions-chart',
   standalone: true,
   imports: [CommonModule],
   template: `<div id="emissions-chart"></div>`,
@@ -19,6 +19,6 @@ export class EmissionsChartComponent {
   }
 
   private createChartLine(data: EmissionChartStructure): void {
-    Highcharts.chart('emissions-chart', data as any);
+    Highcharts.chart('emissions-chart', data as never);
   }
 }
