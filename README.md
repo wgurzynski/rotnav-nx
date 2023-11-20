@@ -1,15 +1,16 @@
-# IMPORTANT! Statefull Services Approach
-✨ **This app utilizes a stateful services approach** ✨
+# IMPORTANT! Store based architecture
+✨ **This app is build around store based architecutre** ✨
 
-Which provides a robust and scalable solution for managing simple application state when there is no need to really on third party libraries like NGRX for example.
-It's main purpose was to showcase my reactive approach interest, and my abilities to architecture reactive applications using plain streams.
-If you're interested in exploring an alternative store-based approach, 
-you can check out my Store-Based Implementation for a different perspective here: 
+Which provides a well structured tool for managing application state and events.
+If you're interested in exploring an alternative reactive approach based purely on statefull services, 
+you can check out my Reactive Implementation for a different perspective here: 
 
-[RotNav - Store Based Solution](https://nx.dev)
+[RotNav - Statefull Services Approach](https://github.com/wgurzynski/rotnav-nx-reactive)
 ## Tools used
 
 📌 **Rxjs - for asynchronous data handling and reactive architecture**
+
+📌 **NgRx - Redux pattern implementation**
 
 📊 **HighCharts for data visualisation**
 
